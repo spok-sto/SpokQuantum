@@ -40,11 +40,10 @@
 
 - **16-voice polyphony** (up to 256 oscillators across the instrument with 7× unison per oscillator)
 - **ZDF / TPT Spok Ladder 24** — zero-delay-feedback 4-pole nonlinear ladder filter with true self-oscillation
-- **2× oversampled EI Niš EL34 tube stage** — half-band Kaiser oversampling eliminates harsh aliasing on hard-driven tubes (23-sample latency reported to the DAW)
+- **2× oversampled EI Niš EL34 tube stage** — half-band Kaiser oversampling eliminates harsh aliasing on hard-driven tubes 
 - **Oscillator B cross-modulation** — Hard Sync, FM, and Ring Modulation driven by Oscillator A with dedicated `B MOD` depth
 - **Filter Variants (`VAR`) + Velocity & Aftertouch to Cutoff** (`VEL>CUT`, `AT>CUT`)
-- **Stronger Quantum Engine solar coupling** — live interplanetary magnetic field (`Bt`, `Bz`, geomagnetic storm index) drives filter cutoff, tube drive, storm wobble, circuit static, and space FX motion while keeping tuning within ±2 cents
-- **Polyphonic glide & Mono/Legato note priority** (Last, Lowest, Highest note priority)
+- **Stronger Quantum Engine solar coupling** — live interplanetary magnetic field (`Bt`, `Bz`, geomagnetic storm index) drives filter cutoff, tube drive, storm wobble, circuit static
 - **Host tempo-synced Delay** (`1/4`, `1/8`, `1/16`, dotted & triplets) with dedicated `DAMPING` control
 - **Unique per-instance voice-card calibration** saved with your DAW session
 
