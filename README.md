@@ -39,11 +39,10 @@
 
 - **16-voice polyphony** (up to 256 oscillators across the instrument with 7× unison per oscillator)
 - **ZDF / TPT Spok Ladder 24** — zero-delay-feedback 4-pole nonlinear ladder filter with true self-oscillation
-- **2× oversampled EI Niš EL34 tube stage** — half-band Kaiser oversampling eliminates harsh aliasing on hard-driven tubes (23-sample latency reported to the DAW)
+- **2× oversampled EI Niš EL34 tube stage** — half-band Kaiser oversampling eliminates harsh aliasing on hard-driven tubes 
 - **Oscillator B cross-modulation** — Hard Sync, FM, and Ring Modulation driven by Oscillator A with dedicated `B MOD` depth
 - **Filter Variants (`VAR`) + Velocity & Aftertouch to Cutoff** (`VEL>CUT`, `AT>CUT`)
-- **Stronger Quantum Engine solar coupling** — live interplanetary magnetic field (`Bt`, `Bz`, geomagnetic storm index) drives filter cutoff, tube drive, storm wobble, circuit static, and space FX motion while keeping tuning within ±2 cents
-- **Polyphonic glide & Mono/Legato note priority** (Last, Lowest, Highest note priority)
+- **Stronger Quantum Engine solar coupling** — live interplanetary magnetic field (`Bt`, `Bz`, geomagnetic storm index) drives filter cutoff, tube drive, storm wobble, circuit static
 - **Host tempo-synced Delay** (`1/4`, `1/8`, `1/16`, dotted & triplets) with dedicated `DAMPING` control
 - **Unique per-instance voice-card calibration** saved with your DAW session
 
@@ -146,15 +145,15 @@ codesign --force --deep -s - ~/Library/Audio/Plug-Ins/VST3/"Spok Quntum.vst3"
 
 ---
 
-## The Quantum Engine — How the Sun shapes the sound
+## The Quantum Engine — Sun shapes the sound
 
 Spok Quntum polls NOAA's Space Weather Prediction Center at most once per minute on a dedicated background thread (never on the real-time audio thread):
 
-| Solar Parameter | Physical Meaning | Musical Effect in Spok Quntum |
+| Solar Parameter | Physical Meaning 
 |---|---|---|
-| **Bt (nT)** | Total interplanetary magnetic field strength | Opens filter cutoff, pushes the EL34 tube harder, widens voice-card tolerances, and deepens Chorus/Delay/Reverb modulation |
-| **Bz (nT)** | North/South magnetic orientation | Steers global warm-up drift direction and shifts tonal brightness (up to ±6 semitones of filter cutoff combined with `Bt`) |
-| **Storm (%)** | 10-minute `Bz` volatility (geomagnetic unrest) | Increases VCO jitter up to 3×, introduces faint cosmic static hiss, and drives a slow organic filter cutoff wobble |
+| **Bt (nT)** | Total interplanetary magnetic field strength 
+| **Bz (nT)** | North/South magnetic orientation 
+| **Storm (%)** | 10-minute `Bz` volatility (geomagnetic unrest)
 
 - **Green indicator light:** Live, valid solar telemetry is active.
 - **Red indicator light:** Offline or no fresh satellite data — solar offset drops smoothly to `0`, and the synth runs purely on its internal analog model.
@@ -213,7 +212,7 @@ Spok Quntum is released under the **GNU General Public License v3.0 or later** (
 ---
 
 <p align="center">
-  <em>Live long and play warm.</em>
+  <em>Live long and play warm. Studenti pobeđuju ;)  </em>
 </p>
 
 <p align="center">
