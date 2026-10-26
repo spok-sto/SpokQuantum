@@ -156,15 +156,15 @@ C:\Program Files\Common Files\VST3\
 
 ---
 
-## The Quantum Engine — How the Sun shapes the sound
+## The Quantum Engine — Sun shapes the sound
 
 Spok Quntum polls NOAA's Space Weather Prediction Center at most once per minute on a dedicated background thread (never on the real-time audio thread):
 
-| Solar Parameter | Physical Meaning | Musical Effect in Spok Quntum |
+| Solar Parameter | Physical Meaning 
 |---|---|---|
-| **Bt (nT)** | Total interplanetary magnetic field strength | Opens filter cutoff, pushes the EL34 tube harder, widens voice-card tolerances, and deepens Chorus/Delay/Reverb modulation |
-| **Bz (nT)** | North/South magnetic orientation | Steers global warm-up drift direction and shifts tonal brightness (up to ±6 semitones of filter cutoff combined with `Bt`) |
-| **Storm (%)** | 10-minute `Bz` volatility (geomagnetic unrest) | Increases VCO jitter up to 3×, introduces faint cosmic static hiss, and drives a slow organic filter cutoff wobble |
+| **Bt (nT)** | Total interplanetary magnetic field strength 
+| **Bz (nT)** | North/South magnetic orientation 
+| **Storm (%)** | 10-minute `Bz` volatility (geomagnetic unrest)
 
 - **Green indicator light:** Live, valid solar telemetry is active.
 - **Red indicator light:** Offline or no fresh satellite data — solar offset drops smoothly to `0`, and the synth runs purely on its internal analog model.
@@ -223,7 +223,7 @@ Spok Quntum is released under the **GNU General Public License v3.0 or later** (
 ---
 
 <p align="center">
-  <em>Live long and play warm.</em>
+  <em>Live long and play warm. Studenti pobeđuju ;)  </em>
 </p>
 
 <p align="center">
