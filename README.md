@@ -21,6 +21,7 @@
   </a>
   <img src="https://img.shields.io/badge/Format-VST3-38BDF8?style=flat-square" alt="VST3 Plug-in">
   <img src="https://img.shields.io/badge/macOS-Apple%20Silicon%20(ARM64)-10B981?style=flat-square&logo=apple&logoColor=white" alt="macOS Apple Silicon">
+  <img src="https://img.shields.io/badge/Windows-x86__64-0078D6?style=flat-square&logo=windows&logoColor=white" alt="Windows x64">
   <img src="https://img.shields.io/badge/Voices-16%20Poly%20%7C%20256%20Osc-A855F7?style=flat-square" alt="16 Voices">
   <a href="LICENSE.md">
     <img src="https://img.shields.io/badge/License-GPL--3.0-F59E0B?style=flat-square" alt="GPL-3.0 License">
@@ -118,6 +119,8 @@ This repository contains pre-built **VST3 binary releases** (no source build req
 SpokQuntum/
 ├── Vst3_macoSX_arm/
 │   └── Spok Quntum.vst3          # macOS Apple Silicon (M1 / M2 / M3 / M4) native VST3
+├── x86_windws/
+│   └── Spok Quntum.vst3          # Windows 64-bit (x86_64) native VST3
 ├── docs/
 │   └── spok-quntum.png
 ├── LICENSE.md
@@ -142,6 +145,14 @@ codesign --force --deep -s - ~/Library/Audio/Plug-Ins/VST3/"Spok Quntum.vst3"
 ```
 
 3. Rescan plug-ins in your DAW (REAPER, Ableton Live, Logic Pro via VST3 bridge, Cubase, Bitwig, FL Studio).
+
+### Quick start — Windows (x86_64)
+
+Copy the `Spok Quntum.vst3` bundle folder from `x86_windws/` into:
+
+```text
+C:\Program Files\Common Files\VST3\
+```
 
 ---
 
