@@ -141,10 +141,8 @@ git clone https://github.com/spok-sto/SpokQuntum.git
 2. Copy `Spok Quntum.vst3` from `Vst3_macoSX_arm/` into your VST3 plug-in folder and clear macOS quarantine attributes:
 
 ```bash
-mkdir -p ~/Library/Audio/Plug-Ins/VST3
-cp -R "SpokQuntum/Vst3_macoSX_arm/Spok Quntum.vst3" ~/Library/Audio/Plug-Ins/VST3/
-xattr -cr ~/Library/Audio/Plug-Ins/VST3/"Spok Quntum.vst3"
-codesign --force --deep -s - ~/Library/Audio/Plug-Ins/VST3/"Spok Quntum.vst3"
+sudo codesign --force --deep -s - "/Library/Audio/Plug-Ins/VST3/Spok Quntum.vst3"
+codesign --verify --deep --strict --verbose=4 "/Library/Audio/Plug-Ins/VST3/Spok Quntum.vst3"
 ```
 
 3. Rescan plug-ins in your DAW (REAPER, Ableton Live, Logic Pro via VST3 bridge, Cubase, Bitwig, FL Studio).
