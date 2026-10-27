@@ -130,6 +130,8 @@ SpokQuntum/
 └── THIRD_PARTY_NOTICES.md
 ```
 
+Both macOS builds require **macOS 11 or newer**.
+
 ### Quick start — macOS (Apple Silicon ARM64)
 
 1. Download or clone this repository:
