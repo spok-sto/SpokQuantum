@@ -1,0 +1,48 @@
+{
+  "Name": "Spok Quntum",
+  "Version": "0.4.0",
+  "Factory Info": {
+    "Vendor": "Quantum Audio",
+    "URL": "",
+    "E-Mail": "spok@konekt.rs",
+    "Flags": {
+      "Unicode": true,
+      "Classes Discardable": false,
+      "Component Non Discardable": false,
+    },
+  },
+  "Classes": [
+    {
+      "CID": "ABCDEF019182FAEB5174756D51613031",
+      "Category": "Audio Module Class",
+      "Name": "Spok Quntum",
+      "Vendor": "Quantum Audio",
+      "Version": "0.4.0",
+      "SDKVersion": "VST 3.8.0",
+      "Sub Categories": [
+        "Instrument",
+        "Synth",
+      ],
+      "Class Flags": 2,
+      "Cardinality": 2147483647,
+      "Snapshots": [
+      ],
+    },
+    {
+      "CID": "ABCDEF011234ABCD5174756D51613031",
+      "Category": "Component Controller Class",
+      "Name": "Spok Quntum",
+      "Vendor": "Quantum Audio",
+      "Version": "0.4.0",
+      "SDKVersion": "VST 3.8.0",
+      "Sub Categories": [
+        "Instrument",
+        "Synth",
+      ],
+      "Class Flags": 2,
+      "Cardinality": 2147483647,
+      "Snapshots": [
+      ],
+    },
+  ],
+}
