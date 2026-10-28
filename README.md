@@ -1,4 +1,4 @@
-# Spok Quntum 0.4.1 — Solar-Driven Polyphonic Synthesizer
+# Spok Quntum 0.4.3 — Solar-Driven Polyphonic Synthesizer
 
 <p align="center">
   <strong>Analog soul. Cosmic character. Shaped in real time by the magnetic field of the Sun.</strong>
