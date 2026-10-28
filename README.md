@@ -1,4 +1,4 @@
-# Spok Quntum 0.4.0 — Solar-Driven Polyphonic Synthesizer
+# Spok Quntum 0.4.1 — Solar-Driven Polyphonic Synthesizer
 
 <p align="center">
   <strong>Analog soul. Cosmic character. Shaped in real time by the magnetic field of the Sun.</strong>
@@ -37,16 +37,8 @@
 
 ---
 
-## What's new in 0.4.0
-
-- **16-voice polyphony** (up to 256 oscillators across the instrument with 7× unison per oscillator)
-- **ZDF / TPT Spok Ladder 24** — zero-delay-feedback 4-pole nonlinear ladder filter with true self-oscillation
-- **2× oversampled EI Niš EL34 tube stage** — half-band Kaiser oversampling eliminates harsh aliasing on hard-driven tubes 
-- **Oscillator B cross-modulation** — Hard Sync, FM, and Ring Modulation driven by Oscillator A with dedicated `B MOD` depth
-- **Filter Variants (`VAR`) + Velocity & Aftertouch to Cutoff** (`VEL>CUT`, `AT>CUT`)
-- **Stronger Quantum Engine solar coupling** — live interplanetary magnetic field (`Bt`, `Bz`, geomagnetic storm index) drives filter cutoff, tube drive, storm wobble, circuit static
-- **Host tempo-synced Delay** (`1/4`, `1/8`, `1/16`, dotted & triplets) with dedicated `DAMPING` control
-- **Unique per-instance voice-card calibration** saved with your DAW session
+## What's new in 0.4.1
+- on/off Space FX
 
 ---
 
@@ -61,7 +53,14 @@ Every voice card has its own fixed component tolerances (cutoff, resonance, enve
 - **No two days on the Sun sound quite the same**
 - **Always in tune** — solar pitch drift stays strictly bounded within ±2 cents
 - **Works offline** — without internet access, the synth plays with its factory-calibrated 50% analog character and zero network overhead on the audio thread
-
+- **16-voice polyphony** (up to 256 oscillators across the instrument with 7× unison per oscillator)
+- **ZDF / TPT Spok Ladder 24** — zero-delay-feedback 4-pole nonlinear ladder filter with true self-oscillation
+- **2× oversampled EI Niš EL34 tube stage** — half-band Kaiser oversampling eliminates harsh aliasing on hard-driven tubes 
+- **Oscillator B cross-modulation** — Hard Sync, FM, and Ring Modulation driven by Oscillator A with dedicated `B MOD` depth
+- **Filter Variants (`VAR`) + Velocity & Aftertouch to Cutoff** (`VEL>CUT`, `AT>CUT`)
+- **Stronger Quantum Engine solar coupling** — live interplanetary magnetic field (`Bt`, `Bz`, geomagnetic storm index) drives filter cutoff, tube drive, storm wobble, circuit static
+- **Host tempo-synced Delay** (`1/4`, `1/8`, `1/16`, dotted & triplets) with dedicated `DAMPING` control
+- **Unique per-instance voice-card calibration** saved with your DAW session
 ---
 
 ## Signal & Solar Telemetry Flow
@@ -101,14 +100,14 @@ MIDI In (Note / Vel / Aftertouch / Pitch Bend ±1–24 st / Mod Wheel / Sustain)
 
 | | Module | What it delivers |
 |---|---|---|
-| 🎛️ | **01 / Oscillators + Analog** | 2 main oscillators with continuous Shape, 7× stereo unison, Hard Sync / FM / Ring Mod (`B MOD`), Sub-oscillator, Noise, and Reset / Free-Run phase |
-| 🔥 | **02 / Filter + EI Niš EL34** | 20 stereo filter models with `VAR` flavours, smooth click-free switching, and a 2× oversampled EL34 pentode tube stage |
-| 🖖 | **03 / Live Long. Play Warm.** | Visual solar telemetry link — green/red satellite status LED and Spock's salute animated by solar wind strength (`Bt`) and geomagnetic unrest (`storm`) |
-| 📈 | **04 / Envelopes + Voice** | Dual analog-curve ADSR envelopes (1 ms to 12 s), 16-voice Poly / Mono / Legato with Low/High priority, polyphonic Glide, and adjustable Pitch Bend (1–24 st) |
-| ☀️ | **05 / Motion + Quantum** | 2 LFOs (5 shapes, 5 targets), Mod Wheel routing, `VEL>CUT` & `AT>CUT`, and the always-on **Quantum Engine** fed by live NOAA solar-wind data |
-| 🌌 | **06 / Space FX** | Stereo quadrature Chorus, tempo-synced modulated Delay with Damping, and lush algorithmic Reverb (up to 30 s decay) |
-| 🎹 | **Full / Mini + Keys** | Switchable `FULL` (1280 px) and `MINI` (760 px) views, on-screen 3-octave keyboard with Pitch/Mod wheels, and computer-keyboard play (`A W S E D F...`) |
-| 💾 | **26 Factory Presets** | Curated Pads, Atmospheres, Leads, Keys, Plucks, and Basses + unlimited user presets |
+ **01 / Oscillators + Analog** | 2 main oscillators with continuous Shape, 7× stereo unison, Hard Sync / FM / Ring Mod (`B MOD`), Sub-oscillator, Noise, and Reset / Free-Run phase |
+ **02 / Filter + EI Niš EL34** | 20 stereo filter models with `VAR` flavours, smooth click-free switching, and a 2× oversampled EL34 pentode tube stage |
+ **03 / Live Long. Play Warm.** | Visual solar telemetry link — green/red satellite status LED and Spock's salute animated by solar wind strength (`Bt`) and geomagnetic unrest (`storm`) |
+ **04 / Envelopes + Voice** | Dual analog-curve ADSR envelopes (1 ms to 12 s), 16-voice Poly / Mono / Legato with Low/High priority, polyphonic Glide, and adjustable Pitch Bend (1–24 st) |
+ **05 / Motion + Quantum** | 2 LFOs (5 shapes, 5 targets), Mod Wheel routing, `VEL>CUT` & `AT>CUT`, and the always-on **Quantum Engine** fed by live NOAA solar-wind data |
+ **06 / Space FX** | Stereo quadrature Chorus, tempo-synced modulated Delay with Damping, and lush algorithmic Reverb (up to 30 s decay) |
+ **Full / Mini + Keys** | Switchable `FULL` (1280 px) and `MINI` (760 px) views, on-screen 3-octave keyboard with Pitch/Mod wheels, and computer-keyboard play (`A W S E D F...`) |
+ **26 Factory Presets** | Curated Pads, Atmospheres, Leads, Keys, Plucks, and Basses + unlimited user presets |
 
 ---
 
