@@ -1,6 +1,6 @@
 {
   "Name": "Spok Quntum",
-  "Version": "0.4.3",
+  "Version": "0.4.4",
   "Factory Info": {
     "Vendor": "Quantum Audio",
     "URL": "",
@@ -17,7 +17,7 @@
       "Category": "Audio Module Class",
       "Name": "Spok Quntum",
       "Vendor": "Quantum Audio",
-      "Version": "0.4.3",
+      "Version": "0.4.4",
       "SDKVersion": "VST 3.8.0",
       "Sub Categories": [
         "Instrument",
@@ -33,7 +33,7 @@
       "Category": "Component Controller Class",
       "Name": "Spok Quntum",
       "Vendor": "Quantum Audio",
-      "Version": "0.4.3",
+      "Version": "0.4.4",
       "SDKVersion": "VST 3.8.0",
       "Sub Categories": [
         "Instrument",
