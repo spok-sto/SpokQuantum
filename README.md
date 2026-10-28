@@ -1,4 +1,4 @@
-# SpokQuantum 0.4.3 — Solar-Driven Polyphonic Synthesizer
+# SpokQuantum 0.4.4 — Solar-Driven Polyphonic Synthesizer
 
 <p align="center">
   <strong>Analog soul. Cosmic character. Shaped in real time by the magnetic field of the Sun.</strong>
@@ -37,8 +37,9 @@
 
 ---
 
-## What's new in 0.4.1
-- on/off Space FX
+## What's new in 0.4.4
+-The EL34 tube stage is at the output. New model with a load line.
+-Saw and Pulse use a 4-point BLEP.
 
 ---
 
@@ -74,24 +75,25 @@ MIDI In (Note / Vel / Aftertouch / Pitch Bend ±1–24 st / Mod Wheel / Sustain)
 [01] OSCILLATORS × 16 VOICES (up to 7× Unison + Sub + Noise)
      ├── Osc A (Saw / Pulse / Tri / Sine + Shape wavefolder)
      ├── Osc B (Hard Sync / FM / Ring Mod from Osc A via B MOD)
-     └── Per-voice card tolerances + VCO jitter + warm-up drift
-  │
-  ▼
-[02] STEREO FILTER BANK (20 Models + VAR Flavours)
+     └── Per-voice card tolerances + VCO jitter + warm-up drift 
+[02] QUANTUM ENGINE (Live NOAA Solar Wind @ 1 req/min, background thread)
+     └── Bt: 9.17 nT │ Bz: +5.07 nT │ Storm: 32% ──► Drift
+
+ │
+ ▼
+     
+[03] STEREO FILTER BANK (20 Models + VAR Flavours)
      ├── Spok Ladder 24 (ZDF 4-pole nonlinear self-oscillating ladder)
      └── 19 Surge-derived LP / BP / HP / Notch / Comb / Tri-Pole filters
   │
   ▼
-[02] EI NIŠ EL34 TUBE STAGE (2× Half-band Oversampled)
-     └── Asymmetric pentode saturation + glowing reactive filament UI
-  │
-  ▼
-[06] SPACE FX CHAIN
+[04] SPACE FX CHAIN
      └── Quadrature Chorus ──► Tempo-Synced Stereo Delay ──► Cosmic Reverb2
-  │
-  ▲
-[05] QUANTUM ENGINE (Live NOAA Solar Wind @ 1 req/min, background thread)
-     └── Bt: 9.17 nT │ Bz: +5.07 nT │ Storm: 32% ──► Cutoff, Drive, Drift, FX
+ │
+ ▼
+[05] EI NIŠ EL34 TUBE STAGE (2×  Oversampled)
+     └── Asymmetric pentode saturation +
+
 ```
 
 ---
@@ -206,8 +208,8 @@ Spok Quantum polls NOAA's Space Weather Prediction Center at most once per minut
 | **Format** | VST3 Instrument |
 | **Sample rates** | 44.1 kHz, 48 kHz, 96 kHz, 192 kHz |
 | **Audio thread** | Allocation-free, lock-free, 16-sample control blocks, 4-lane SIMD filter bank |
-| **Latency** | 23 samples (from 2× half-band tube oversampler, reported to host) |
-| **CPU usage** | ~11% of one Apple M-series core worst-case (16 voices × 7 unison × 2 oscillators + all FX @ 48 kHz) |
+| **Latency** | 23 samples (from 2× tube oversampler, reported to host) |
+| **CPU usage** | ~6% of one Apple M-1 worst-case (16 voices × 7 unison × 2 oscillators + all FX @ 48 kHz) |
 
 ---
 
