@@ -1,4 +1,4 @@
-# Spok Quntum 0.4.3 — Solar-Driven Polyphonic Synthesizer
+# SpokQuantum 0.4.3 — Solar-Driven Polyphonic Synthesizer
 
 <p align="center">
   <strong>Analog soul. Cosmic character. Shaped in real time by the magnetic field of the Sun.</strong>
@@ -16,8 +16,8 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/spok-sto/SpokQuntum">
-    <img src="https://img.shields.io/github/stars/spok-sto/SpokQuntum?style=flat-square&logo=github&label=Stars" alt="GitHub stars">
+  <a href="https://github.com/spok-sto/SpokQuantum">
+    <img src="https://img.shields.io/github/stars/spok-sto/SpokQuantum?style=flat-square&logo=github&label=Stars" alt="GitHub stars">
   </a>
   <img src="https://img.shields.io/badge/Format-VST3-38BDF8?style=flat-square" alt="VST3 Plug-in">
   <img src="https://img.shields.io/badge/macOS-Apple%20Silicon%20(ARM64)-10B981?style=flat-square&logo=apple&logoColor=white" alt="macOS Apple Silicon">
@@ -30,8 +30,8 @@
 </p>
 
 <p align="center">
-  <a href="docs/spok-quntum.png">
-    <img src="docs/spok-quntum.png" alt="Spok Quntum 0.4.0 — 16-voice solar-driven polyphonic VST3 synthesizer" width="100%">
+  <a href="docs/spok-Quantum.png">
+    <img src="docs/spok-Quantum.png" alt="Spok Quantum 0.4.0 — 16-voice solar-driven polyphonic VST3 synthesizer" width="100%">
   </a>
 </p>
 
@@ -42,11 +42,11 @@
 
 ---
 
-## Why Spok Quntum?
+## Why Spok Quantum?
 
 Digital synthesizers often fail in one of two ways: either they are sterile and predictable, or they drown the mix in artificial random detuning that pulls chords out of tune.
 
-Spok Quntum builds calibrated hardware behavior into every voice — and connects the circuit to the real universe.
+Spok Quantum builds calibrated hardware behavior into every voice — and connects the circuit to the real universe.
 
 Every voice card has its own fixed component tolerances (cutoff, resonance, envelope timing, pulse width, and ±1.5 cent tuning), while the **Quantum Engine** reads live measurements of the solar wind from NOAA's DSCOVR / ACE satellites at the L1 Lagrange point.
 
@@ -65,7 +65,7 @@ Every voice card has its own fixed component tolerances (cutoff, resonance, enve
 
 ## Signal & Solar Telemetry Flow
 
-> **How does a note travel through Spok Quntum?**
+> **How does a note travel through Spok Quantum?**
 
 ```text
 MIDI In (Note / Vel / Aftertouch / Pitch Bend ±1–24 st / Mod Wheel / Sustain)
@@ -116,15 +116,15 @@ MIDI In (Note / Vel / Aftertouch / Pitch Bend ±1–24 st / Mod Wheel / Sustain)
 This repository contains pre-built **VST3 binary releases** (no source build required):
 
 ```text
-SpokQuntum/
+SpokQuantum/
 ├── Vst3_macoSX_arm/
-│   └── Spok Quntum.vst3          # macOS Apple Silicon (M1 / M2 / M3 / M4) native VST3
+│   └── Spok Quantum.vst3          # macOS Apple Silicon (M1 / M2 / M3 / M4) native VST3
 ├── Vst3_macoSX_intel/
-│   └── Spok Quntum.vst3          # macOS Intel (x86_64) native VST3
+│   └── Spok Quantum.vst3          # macOS Intel (x86_64) native VST3
 ├── x86_windws/
-│   └── Spok Quntum.vst3          # Windows 64-bit (x86_64) native VST3
+│   └── Spok Quantum.vst3          # Windows 64-bit (x86_64) native VST3
 ├── docs/
-│   └── spok-quntum.png
+│   └── spok-Quantum.png
 ├── LICENSE.md
 └── THIRD_PARTY_NOTICES.md
 ```
@@ -136,14 +136,14 @@ Both macOS builds require **macOS 11 or newer**.
 1. Download or clone this repository:
 
 ```bash
-git clone https://github.com/spok-sto/SpokQuntum.git
+git clone https://github.com/spok-sto/SpokQuantum.git
 ```
 
-2. Copy `Spok Quntum.vst3` from `Vst3_macoSX_arm/` into your VST3 plug-in folder and clear macOS quarantine attributes:
+2. Copy `Spok Quantum.vst3` from `Vst3_macoSX_arm/` into your VST3 plug-in folder and clear macOS quarantine attributes:
 
 ```bash
-sudo codesign --force --deep -s - "/Library/Audio/Plug-Ins/VST3/Spok Quntum.vst3"
-codesign --verify --deep --strict --verbose=4 "/Library/Audio/Plug-Ins/VST3/Spok Quntum.vst3"
+sudo codesign --force --deep -s - "/Library/Audio/Plug-Ins/VST3/Spok Quantum.vst3"
+codesign --verify --deep --strict --verbose=4 "/Library/Audio/Plug-Ins/VST3/Spok Quantum.vst3"
 ```
 
 3. Rescan plug-ins in your DAW (REAPER, Ableton Live, Logic Pro via VST3 bridge, Cubase, Bitwig, FL Studio).
@@ -154,14 +154,14 @@ Same steps as Apple Silicon, using the Intel bundle:
 
 ```bash
 mkdir -p ~/Library/Audio/Plug-Ins/VST3
-cp -R "SpokQuntum/Vst3_macoSX_intel/Spok Quntum.vst3" ~/Library/Audio/Plug-Ins/VST3/
-xattr -cr ~/Library/Audio/Plug-Ins/VST3/"Spok Quntum.vst3"
-codesign --force --deep -s - ~/Library/Audio/Plug-Ins/VST3/"Spok Quntum.vst3"
+cp -R "SpokQuantum/Vst3_macoSX_intel/Spok Quantum.vst3" ~/Library/Audio/Plug-Ins/VST3/
+xattr -cr ~/Library/Audio/Plug-Ins/VST3/"Spok Quantum.vst3"
+codesign --force --deep -s - ~/Library/Audio/Plug-Ins/VST3/"Spok Quantum.vst3"
 ```
 
 ### Quick start — Windows (x86_64)
 
-Copy the `Spok Quntum.vst3` bundle folder from `x86_windws/` into:
+Copy the `Spok Quantum.vst3` bundle folder from `x86_windws/` into:
 
 ```text
 C:\Program Files\Common Files\VST3\
@@ -171,7 +171,7 @@ C:\Program Files\Common Files\VST3\
 
 ## The Quantum Engine — Sun shapes the sound
 
-Spok Quntum polls NOAA's Space Weather Prediction Center at most once per minute on a dedicated background thread (never on the real-time audio thread):
+Spok Quantum polls NOAA's Space Weather Prediction Center at most once per minute on a dedicated background thread (never on the real-time audio thread):
 
 | Solar Parameter | Physical Meaning 
 |---|---|---|
@@ -213,17 +213,17 @@ Spok Quntum polls NOAA's Space Weather Prediction Center at most once per minute
 
 ## Feedback
 
-If you play Spok Quntum, share your thoughts and bug reports:
+If you play Spok Quantum, share your thoughts and bug reports:
 
-[Open an issue](https://github.com/spok-sto/SpokQuntum/issues)
+[Open an issue](https://github.com/spok-sto/SpokQuantum/issues)
 
-## Support Spok Quntum
+## Support Spok Quantum
 
-If you enjoy Spok Quntum in your productions, you can support its continued development through a donation:
+If you enjoy Spok Quantum in your productions, you can support its continued development through a donation:
 
 <p align="center">
   <a href="https://paypal.me/spoke26">
-    <img src="https://img.shields.io/badge/Support%20Spok%20Quntum-Donate%20with%20PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white" alt="Donate with PayPal">
+    <img src="https://img.shields.io/badge/Support%20Spok%20Quantum-Donate%20with%20PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white" alt="Donate with PayPal">
   </a>
 </p>
 
@@ -231,7 +231,7 @@ If you enjoy Spok Quntum in your productions, you can support its continued deve
 
 **Design & Programming:** Srdjan Stojkovic — Serbia, 2026 — [spok@konekt.rs](mailto:spok@konekt.rs)
 
-Spok Quntum is released under the **GNU General Public License v3.0 or later** (see [LICENSE.md](LICENSE.md) and [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)).
+Spok Quantum is released under the **GNU General Public License v3.0 or later** (see [LICENSE.md](LICENSE.md) and [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)).
 
 ---
 
@@ -240,9 +240,9 @@ Spok Quntum is released under the **GNU General Public License v3.0 or later** (
 </p>
 
 <p align="center">
-  <a href="https://github.com/spok-sto/SpokQuntum">GitHub</a>
+  <a href="https://github.com/spok-sto/SpokQuantum">GitHub</a>
   ·
-  <a href="https://github.com/spok-sto/SpokQuntum/issues">Feedback</a>
+  <a href="https://github.com/spok-sto/SpokQuantum/issues">Feedback</a>
   ·
   <a href="https://paypal.me/spoke26">Donate</a>
 </p>
