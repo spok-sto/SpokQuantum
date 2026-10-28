@@ -8,8 +8,8 @@
     "Flags": {
       "Unicode": true,
       "Classes Discardable": false,
-      "Component Non Discardable": false,
-    },
+      "Component Non Discardable": false
+    }
   },
   "Classes": [
     {
@@ -21,12 +21,12 @@
       "SDKVersion": "VST 3.8.0",
       "Sub Categories": [
         "Instrument",
-        "Synth",
+        "Synth"
       ],
       "Class Flags": 2,
       "Cardinality": 2147483647,
       "Snapshots": [
-      ],
+      ]
     },
     {
       "CID": "ABCDEF011234ABCD5174756D51613031",
@@ -37,12 +37,12 @@
       "SDKVersion": "VST 3.8.0",
       "Sub Categories": [
         "Instrument",
-        "Synth",
+        "Synth"
       ],
       "Class Flags": 2,
       "Cardinality": 2147483647,
       "Snapshots": [
-      ],
-    },
-  ],
+      ]
+    }
+  ]
 }

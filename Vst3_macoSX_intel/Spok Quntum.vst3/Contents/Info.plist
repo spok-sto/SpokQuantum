@@ -18,9 +18,9 @@
     <key>CFBundleSignature</key>
     <string>????</string>
     <key>CFBundleShortVersionString</key>
-    <string>0.4.0</string>
+    <string>0.4.3</string>
     <key>CFBundleVersion</key>
-    <string>0.4.0</string>
+    <string>0.4.3</string>
     <key>NSHumanReadableCopyright</key>
     <string>Copyright (C) 2026 Srdjan Stojkovic, Serbia. GPL-3.0-or-later.</string>
     <key>NSHighResolutionCapable</key>
