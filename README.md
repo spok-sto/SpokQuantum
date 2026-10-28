@@ -38,7 +38,7 @@
 ---
 
 ## What's new in 0.4.4
--The EL34 tube stage is at the output. New model with a load line.
+-The EL34 tube stage is at the output whit new tube model with a load line.
 -Saw and Pulse use a 4-point BLEP.
 
 ---
