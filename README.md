@@ -31,15 +31,20 @@
 
 <p align="center">
   <a href="docs/spok-Quantum.png">
-    <img src="docs/spok-Quantum.png" alt="Spok Quantum 0.4.0 — 16-voice solar-driven polyphonic VST3 synthesizer" width="100%">
+    <img src="docs/spok-Quantum.png" alt="SpokQuantum 0.4.5 — 16-voice solar-driven polyphonic VST3 synthesizer" width="100%">
   </a>
 </p>
 
 ---
 
 ## What's new in 0.4.5
--The tube has a sagging power supply and an output transformer.
--Analog instability is closer to a real synth
+
+- The EL34 output stage is calmer at the default 40%: single notes get a warm second harmonic, chords stay near 3% distortion, and 0% is almost clean. At 100% it is still fully driven.
+- The tube has a sagging power supply and an output transformer. Loud passages breathe, and low bass (around 40 Hz) picks up a little weight.
+- The Spok Ladder runs at 2× and its cutoff glides sample by sample, so fast filter sweeps no longer step. Hard Sync is band-limited.
+- Poly voices sit slightly apart in the stereo field. Circuit hiss is pink.
+- Analog instability is closer to a real synth: a slow warm-up drift that always runs, a small octave-tracking error per voice, and no two notes quite the same. The Sun only leans that drift. It does not move the filter, the tube or the effects.
+- The product title reads СпокQuantum.
 
 ---
 
@@ -59,7 +64,7 @@ Every voice card has its own fixed component tolerances (cutoff, resonance, enve
 - **2× oversampled EI Niš EL34 tube stage** — half-band Kaiser oversampling eliminates harsh aliasing on hard-driven tubes 
 - **Oscillator B cross-modulation** — Hard Sync, FM, and Ring Modulation driven by Oscillator A with dedicated `B MOD` depth
 - **Filter Variants (`VAR`) + Velocity & Aftertouch to Cutoff** (`VEL>CUT`, `AT>CUT`)
-- **Quantum Engine solar coupling** — live interplanetary magnetic field (`Bt`, `Bz`, geomagnetic storm index) 
+- **Quantum Engine** — live solar-wind data (`Bt`, `Bz`, geomagnetic storm) adds small analog irregularities to the oscillators. It does not move the filter, the tube or the effects
 - **Host tempo-synced Delay** (`1/4`, `1/8`, `1/16`, dotted & triplets) with dedicated `DAMPING` control
 - **Unique per-instance voice-card calibration** saved with your DAW session
 ---
@@ -91,8 +96,8 @@ MIDI In (Note / Vel / Aftertouch / Pitch Bend ±1–24 st / Mod Wheel / Sustain)
      └── Quadrature Chorus ──► Tempo-Synced Stereo Delay ──► Cosmic Reverb2
  │
  ▼
-[05] EI NIŠ EL34 TUBE STAGE (2×  Oversampled)
-     └── Asymmetric pentode saturation +
+[05] EI NIŠ EL34 TUBE STAGE (2× oversampled, Koren pentode + load line)
+     └── Sagging power supply ──► Output transformer
 
 ```
 
@@ -208,8 +213,8 @@ Live solar-wind data (`Bt`, `Bz`, geomagnetic storm) adds small analog irregular
 | **Format** | VST3 Instrument |
 | **Sample rates** | 44.1 kHz, 48 kHz, 96 kHz, 192 kHz |
 | **Audio thread** | Allocation-free, lock-free, 16-sample control blocks, 4-lane SIMD filter bank |
-| **Latency** | 46 samples (about 1 ms at 48 kHz)
-| **CPU usage one core ** | about 12% of one Apple M4 core at 16 voices × 7 unison on the Spok Ladder, with chorus, delay and reverb, at 48 kHz  |
+| **Latency** | 46 samples (about 1 ms at 48 kHz), reported to the host |
+| **CPU usage** | about 16% of one Apple M4 core at 16 voices × 7 unison on the Spok Ladder, with chorus, delay and reverb, at 48 kHz |
 
 ---
 
