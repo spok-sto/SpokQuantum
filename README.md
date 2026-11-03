@@ -39,13 +39,8 @@
 
 ## What's new in 0.4.5
 
-- The EL34 output stage is calmer at the default 40%: single notes get a warm second harmonic, chords stay near 3% distortion, and 0% is almost clean. At 100% it is still fully driven.
 - The tube has a sagging power supply and an output transformer. Loud passages breathe, and low bass (around 40 Hz) picks up a little weight.
-- The Spok Ladder runs at 2× and its cutoff glides sample by sample, so fast filter sweeps no longer step. Hard Sync is band-limited.
-- Poly voices sit slightly apart in the stereo field. Circuit hiss is pink.
-- Analog instability is closer to a real synth: a slow warm-up drift that always runs, a small octave-tracking error per voice, and no two notes quite the same. The Sun only leans that drift. It does not move the filter, the tube or the effects.
-- The product title reads СпокQuantum.
-
+- Analog instability is closer to a real synth
 ---
 
 ## Why Spok Quantum?
