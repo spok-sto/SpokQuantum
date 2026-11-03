@@ -1,4 +1,4 @@
-# SpokQuantum 0.4.4 — Solar-Driven Polyphonic Synthesizer
+# SpokQuantum 0.4.5 — Solar-Driven Polyphonic VST Synthesizer
 
 <p align="center">
   <strong>Analog soul. Cosmic character. Shaped in real time by the magnetic field of the Sun.</strong>
@@ -37,9 +37,9 @@
 
 ---
 
-## What's new in 0.4.4
--The EL34 tube stage is at the output whit new tube model with a load line.
--Saw and Pulse use a 4-point BLEP.
+## What's new in 0.4.5
+-The tube has a sagging power supply and an output transformer.
+-Analog instability is closer to a real synth
 
 ---
 
@@ -59,7 +59,7 @@ Every voice card has its own fixed component tolerances (cutoff, resonance, enve
 - **2× oversampled EI Niš EL34 tube stage** — half-band Kaiser oversampling eliminates harsh aliasing on hard-driven tubes 
 - **Oscillator B cross-modulation** — Hard Sync, FM, and Ring Modulation driven by Oscillator A with dedicated `B MOD` depth
 - **Filter Variants (`VAR`) + Velocity & Aftertouch to Cutoff** (`VEL>CUT`, `AT>CUT`)
-- **Stronger Quantum Engine solar coupling** — live interplanetary magnetic field (`Bt`, `Bz`, geomagnetic storm index) drives filter cutoff, tube drive, storm wobble, circuit static
+- **Quantum Engine solar coupling** — live interplanetary magnetic field (`Bt`, `Bz`, geomagnetic storm index) 
 - **Host tempo-synced Delay** (`1/4`, `1/8`, `1/16`, dotted & triplets) with dedicated `DAMPING` control
 - **Unique per-instance voice-card calibration** saved with your DAW session
 ---
@@ -106,7 +106,7 @@ MIDI In (Note / Vel / Aftertouch / Pitch Bend ±1–24 st / Mod Wheel / Sustain)
  **02 / Filter + EI Niš EL34** | 20 stereo filter models with `VAR` flavours, smooth click-free switching, and a 2× oversampled EL34 pentode tube stage |
  **03 / Live Long. Play Warm.** | Visual solar telemetry link — green/red satellite status LED and Spock's salute animated by solar wind strength (`Bt`) and geomagnetic unrest (`storm`) |
  **04 / Envelopes + Voice** | Dual analog-curve ADSR envelopes (1 ms to 12 s), 16-voice Poly / Mono / Legato with Low/High priority, polyphonic Glide, and adjustable Pitch Bend (1–24 st) |
- **05 / Motion + Quantum** | 2 LFOs (5 shapes, 5 targets), Mod Wheel routing, `VEL>CUT` & `AT>CUT`, and the always-on **Quantum Engine** fed by live NOAA solar-wind data |
+ **05 / Motion + Quantum** | 2 LFOs (5 shapes, 5 targets), Mod Wheel routing, `VEL>CUT` & `AT>CUT`,  **Quantum Engine** fed by live NOAA solar-wind data |
  **06 / Space FX** | Stereo quadrature Chorus, tempo-synced modulated Delay with Damping, and lush algorithmic Reverb (up to 30 s decay) |
  **Full / Mini + Keys** | Switchable `FULL` (1280 px) and `MINI` (760 px) views, on-screen 3-octave keyboard with Pitch/Mod wheels, and computer-keyboard play (`A W S E D F...`) |
  **26 Factory Presets** | Curated Pads, Atmospheres, Leads, Keys, Plucks, and Basses + unlimited user presets |
@@ -173,7 +173,7 @@ C:\Program Files\Common Files\VST3\
 
 ## The Quantum Engine — Sun shapes the sound
 
-Spok Quantum polls NOAA's Space Weather Prediction Center at most once per minute on a dedicated background thread (never on the real-time audio thread):
+Live solar-wind data (`Bt`, `Bz`, geomagnetic storm) adds small analog irregularities to the oscillators. 
 
 | Solar Parameter | Physical Meaning 
 |---|---|---|
@@ -208,8 +208,8 @@ Spok Quantum polls NOAA's Space Weather Prediction Center at most once per minut
 | **Format** | VST3 Instrument |
 | **Sample rates** | 44.1 kHz, 48 kHz, 96 kHz, 192 kHz |
 | **Audio thread** | Allocation-free, lock-free, 16-sample control blocks, 4-lane SIMD filter bank |
-| **Latency** | 23 samples (from 2× tube oversampler, reported to host) |
-| **CPU usage** | ~6% of one Apple M-1 worst-case (16 voices × 7 unison × 2 oscillators + all FX @ 48 kHz) |
+| **Latency** | 46 samples (about 1 ms at 48 kHz)
+| **CPU usage one core ** | about 12% of one Apple M4 core at 16 voices × 7 unison on the Spok Ladder, with chorus, delay and reverb, at 48 kHz  |
 
 ---
 
