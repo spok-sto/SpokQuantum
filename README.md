@@ -41,6 +41,8 @@
 
 - The tube has a sagging power supply and an output transformer. Loud passages breathe, and low bass (around 40 Hz) picks up a little weight.
 - Analog instability is closer to a real synth
+- Downloads are installers: one macOS package for Apple Silicon and Intel, and a Windows setup that also installs the Visual C++ runtime
+- Opening the plug-in shows a short note and a Donate with PayPal button. The same text is in About
 ---
 
 ## Why Spok Quantum?
@@ -119,55 +121,28 @@ This repository contains pre-built **VST3 binary releases** (no source build req
 
 ```text
 SpokQuantum/
-├── Vst3_macoSX_arm/
-│   └── Spok Quantum.vst3          # macOS Apple Silicon (M1 / M2 / M3 / M4) native VST3
-├── Vst3_macoSX_intel/
-│   └── Spok Quantum.vst3          # macOS Intel (x86_64) native VST3
-├── x86_windws/
-│   └── Spok Quantum.vst3          # Windows 64-bit (x86_64) native VST3
+├── Spok-Quntum-0.4.5-macOS.pkg           # macOS 11 or newer, Apple Silicon and Intel
+├── Spok-Quntum-0.4.5-Windows-Setup.zip   # Windows 64-bit installer
 ├── docs/
 │   └── spok-Quantum.png
 ├── LICENSE.md
 └── THIRD_PARTY_NOTICES.md
 ```
 
-Both macOS builds require **macOS 11 or newer**.
+### Quick start — macOS (Apple Silicon and Intel)
 
-### Quick start — macOS (Apple Silicon ARM64)
+1. Download `Spok-Quntum-0.4.5-macOS.pkg`.
+2. Open it. If macOS says the installer is from an unidentified developer, right-click the package and choose Open.
+3. The installer puts `Spok Quntum.vst3` in `/Library/Audio/Plug-Ins/VST3/` and checks the signature.
+4. Rescan plug-ins in your DAW (REAPER, Ableton Live, Logic Pro via VST3 bridge, Cubase, Bitwig, FL Studio).
 
-1. Download or clone this repository:
-
-```bash
-git clone https://github.com/spok-sto/SpokQuantum.git
-```
-
-2. Copy `Spok Quantum.vst3` from `Vst3_macoSX_arm/` into your VST3 plug-in folder and clear macOS quarantine attributes:
-
-```bash
-sudo codesign --force --deep -s - "/Library/Audio/Plug-Ins/VST3/Spok Quantum.vst3"
-codesign --verify --deep --strict --verbose=4 "/Library/Audio/Plug-Ins/VST3/Spok Quantum.vst3"
-```
-
-3. Rescan plug-ins in your DAW (REAPER, Ableton Live, Logic Pro via VST3 bridge, Cubase, Bitwig, FL Studio).
-
-### Quick start — macOS (Intel x86_64)
-
-Same steps as Apple Silicon, using the Intel bundle:
-
-```bash
-mkdir -p ~/Library/Audio/Plug-Ins/VST3
-cp -R "SpokQuantum/Vst3_macoSX_intel/Spok Quantum.vst3" ~/Library/Audio/Plug-Ins/VST3/
-xattr -cr ~/Library/Audio/Plug-Ins/VST3/"Spok Quantum.vst3"
-codesign --force --deep -s - ~/Library/Audio/Plug-Ins/VST3/"Spok Quantum.vst3"
-```
+Requires **macOS 11 or newer**. One package contains both Apple Silicon and Intel.
 
 ### Quick start — Windows (x86_64)
 
-Copy the `Spok Quantum.vst3` bundle folder from `x86_windws/` into:
-
-```text
-C:\Program Files\Common Files\VST3\
-```
+1. Download and unzip `Spok-Quntum-0.4.5-Windows-Setup.zip`.
+2. Run `Install.cmd`. It asks for administrator rights, copies the plug-in to `C:\Program Files\Common Files\VST3\`, and installs the Visual C++ 2015–2022 runtime.
+3. In Ableton: Preferences, Plug-ins, turn on **Use VST3 Plug-In System Folders**, then Rescan.
 
 ---
 
