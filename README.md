@@ -41,6 +41,8 @@
 
 - The tube has a sagging power supply and an output transformer. Loud passages breathe, and low bass (around 40 Hz) picks up a little weight.
 - Analog instability is closer to a real synth
+
+https://www.youtube.com/watch?v=2CktbLDd--Y
 ---
 
 ## Why Spok Quantum?
