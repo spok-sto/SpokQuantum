@@ -158,6 +158,13 @@ Live solar-wind data (`Bt`, `Bz`, geomagnetic storm) adds small analog irregular
 
 ---
 
+## Download 
+
+Download the latest ready-to-use version of the plugin using the links below. 
+https://github.com/spok-sto/SpokQuantum/archive/refs/heads/main.zip
+
+---
+
 ## Feedback
 
 If you play Spok Quantum, share your thoughts and bug reports:
