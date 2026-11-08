@@ -183,7 +183,7 @@ If you enjoy Spok Quantum in your productions, you can support its continued dev
 
 ## License & Credits
 
-**Design & Programming:** Srdjan Stojkovic — Serbia, 2026 — [spok@konekt.rs](mailto:spok@konekt.rs)
+**Design & Programming:** Srdjan Stojkovic — Serbia, 2025.-2026.  [spok@konekt.rs](mailto:spok@konekt.rs)
 
 Spok Quantum is released under the **GNU General Public License v3.0 or later** (see [LICENSE.md](LICENSE.md) and [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)).
 
